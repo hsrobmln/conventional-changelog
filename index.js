@@ -13,6 +13,7 @@ function generate(options, done) {
     file: 'CHANGELOG.md',
     subtitle: '',
     log: console.log.bind(console),
+    gitgrep: '\w'
   }, options || {});
 
   if (!options.version) {
@@ -33,6 +34,7 @@ function generate(options, done) {
     git.getCommits({
       from: options.from,
       to: options.to,
+      grep: options.gitgrep
     }, function(err, commits) {
       if (err) return done('Failed to read git log.\n'+err);
       writeLog(commits);
