@@ -1,7 +1,7 @@
 {
   "name": "conventional-changelog",
   "codename": "reorder",
-  "version": "0.1.5-mln",
+  "version": "0.1.6-mln",
   "description": "Generate a markdown changelog from git commit metadata",
   "main": "index.js",
   "scripts": {
