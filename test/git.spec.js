@@ -44,6 +44,8 @@ describe('git', function() {
 	  expect(msg.items[1].subject).to.equal('improve a stupid issue on the controller');
       expect(msg.items[1].body).to.equal('\nhow frustrating for users!\n');
     });
+	
+	
     it('should parse closed issues', function() {
       var msg = git.parseRawCommit(
         '13f31602f396bc269076ab4d389cfd8ca94b20ba\n' +
